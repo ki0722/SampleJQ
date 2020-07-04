@@ -29,9 +29,16 @@ header {
   box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
 }
 
+header img{
+position: absolute;
+top: 0.8rem;
+left: 13rem;
+width:90px;
+}
+
 header h1 {
   position: absolute;
-  top: 1.5rem;
+  top: 0.7rem;
   left: 2rem;
   font-size: 1.2rem;
   background:-webkit-linear-gradient(0deg, #3333cc, #86FDE8);
@@ -85,14 +92,38 @@ header h1 {
 
 main {
   display: flex;
-  flex-direction: column;
+  flex-wrap：wrap;
+  background:#FFFFFF;
+  justify-content:space-between;
 }
-article {
+
+article#VIDEO  {
   padding: 2rem;
   text-align: justify;
   font-size: 0.85rem;
-  background-color: white;
+
+  width: 100%;
+ }
+
+ article#TEXT{
+    /*height: 8rem;*/
+    width:90%;
+    padding: 5%;
+   font-size: 1.5rem;
+   color: #0B0B3B;
+   /*background斜め４つ色*/
+   background: linear-gradient(to bottom right, #FFF, #FE9A2E 25%, #F89174 15%, #748af8);
+ }
+
+  article{
+  flex:1;
+  padding: 3rem;
+  font-size: 1.5rem;
+    /*background斜め*/
+  background: linear-gradient(to bottom right,#fbfcdb,#d4d3dd);
 }
+
+
 aside {
   padding: 2rem;
   text-align: left;
