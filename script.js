@@ -1,3 +1,16 @@
+$ ( function ( ) {
+    // ここに処理を記述します
+    $( "#con" ).hide();
+
+    $( "#menuButton" ).click( function() {
+      $( "#con" ).slideToggle('slow');
+    });
+});
+
+
+
+
+
 // Window幅に応じたメニュー表示の変更
 function ShowAndHide(win){
   if(win < 769){

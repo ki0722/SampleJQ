@@ -12,6 +12,12 @@ body {
   font-size: 16px;
   background-color: silver;
 }
+#menuButton {
+  position: absolute;
+  top: 6rem;
+  left: 2rem;
+  width:80px;
+}
 
 /*-------------------------------
          LAYOUT MOBILE
@@ -24,22 +30,22 @@ body {
 
 header {
   position:relative;
-  height: 8rem;
- background:linear-gradient(to top,#000011,#000055);
+  height: 5rem;
+  background:linear-gradient(to top,#000011,#000055);
   box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
 }
 
-header img{
-position: absolute;
-top: 0.8rem;
-left: 13rem;
-width:90px;
+#logo {
+  position: absolute;
+  top: 0.8rem;
+  left: 2rem;
+  width:50px;
 }
 
 header h1 {
   position: absolute;
   top: 0.7rem;
-  left: 2rem;
+  left: 6rem;
   font-size: 1.2rem;
   background:-webkit-linear-gradient(0deg, #3333cc, #86FDE8);
   -webkit-background-clip: text;
@@ -91,40 +97,41 @@ header h1 {
 }
 
 main {
-  display: flex;
-  flex-wrap：wrap;
   background:#FFFFFF;
   justify-content:space-between;
 }
 
-article#VIDEO  {
-  padding: 2rem;
-  text-align: justify;
-  font-size: 0.85rem;
-
-  width: 100%;
- }
-
- article#TEXT{
-    /*height: 8rem;*/
-    width:90%;
-    padding: 5%;
-   font-size: 1.5rem;
-   color: #0B0B3B;
-   /*background斜め４つ色*/
-   background: linear-gradient(to bottom right, #FFF, #FE9A2E 25%, #F89174 15%, #748af8);
- }
-
-  article{
-  flex:1;
+article{
+  flex:3;
   padding: 3rem;
   font-size: 1.5rem;
     /*background斜め*/
   background: linear-gradient(to bottom right,#fbfcdb,#d4d3dd);
 }
 
+article#VIDEO  {
+  width:90%;
+  padding: 5%;
+  text-align: justify;
+  font-size: 0.85rem;
+ }
+
+ article#VIDEO video {
+   width: 100%;
+  }
+
+ article#TEXT{
+    /*height: 8rem;*/
+  width:90%;
+  padding: 5%;
+  font-size: 1.5rem;
+  color: #0B0B3B;
+  /*background斜め４つ色*/
+  background: linear-gradient(to bottom right, #FFF, #FE9A2E 25%, #F89174 15%, #748af8);
+ }
 
 aside {
+  flex: 1;
   padding: 2rem;
   text-align: left;
   font-size: 0.85rem;
@@ -158,9 +165,16 @@ footer h3 {  background:-webkit-linear-gradient(0deg, #98fb98, #86FDE8);
   header {
     height: 7rem;
   }
+
+  #logo {
+    top: 0.8rem;
+    left: 15%;
+    width: 90px;
+  }
+
   header h1 {
     top: 2.5rem;
-    left: 0rem;
+    left: 0;
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
@@ -182,17 +196,19 @@ footer h3 {  background:-webkit-linear-gradient(0deg, #98fb98, #86FDE8);
   }
 
   main {
+    display: flex;
+    flex-wrap：wrap;
     flex-direction: row;
     margin-top: 3rem;
   }
+
   article {
     flex: 3;
-    padding: 3rem;
     font-size: 1rem;
   }
+
   aside {
     flex: 1;
-    padding: 3rem;
     font-size: 1rem;
   }
 
